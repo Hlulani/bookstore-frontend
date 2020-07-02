@@ -18,7 +18,7 @@
             <td>{{book.author}}</td>
             <td>{{book.prices}}</td>
             <td>{{book.year}}</td>
-            <td><button (click)="deleteBooks(id)" class="btn btn-danger">Delete</button>
+            <td><button (click)="deleteBooks(book.id)" class="btn btn-danger">Delete</button>
               <button (click)="updateBooks(book.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
               <button (click)="bookDetails(book.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
           </td>
