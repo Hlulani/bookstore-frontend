@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class BookService {
  
-  private baseUrl = 'http://localhost:9080/api/books/';
+  private baseUrl = 'http://localhost:9080/api/books';
 
   constructor(private http: HttpClient) { }
 
   getBookById(id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+    return this.http.get(`${this.baseUrl}/book/${id}`);
   }
 
   createBooks(book: Object): Observable<Object> {
@@ -21,11 +21,12 @@ export class BookService {
   }
 
   updateBooks(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+    return this.http.put(`${this.baseUrl}/book/${id}`, value);
   }
 
   deleteBook(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+    console.log(id);
+    return this.http.delete(`${this.baseUrl}/book/${id}`, { responseType: 'text' });
   }
 
   getAllBooks(): Observable<any> {
