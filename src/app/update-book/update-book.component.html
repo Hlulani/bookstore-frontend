@@ -2,20 +2,25 @@
 <div style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="name">Title:</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="book.name" name="name">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="book.name" name="Title">
     </div>
 
     <div class="form-group">
       <label for="name">Author</label>
-      <input type="text" class="form-control" id="author" required [(ngModel)]="book.author" name="author">
+      <input type="text" class="form-control" id="author" required [(ngModel)]="book.author" name="Author">
     </div>
 
     <div class="form-group">
       <label for="name">Year</label>
-      <input type="text" class="form-control" id="year" required [(ngModel)]="book.year" name="year">
+      <input type="text" class="form-control" id="year" required [(ngModel)]="book.year" name="Year">
     </div>
-  
+
+    <div class="form-group">
+        <label for="name">Price</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="book.price" name="Price">
+      </div>
+
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
 </div>

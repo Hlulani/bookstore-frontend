@@ -1,3 +1,11 @@
+
+This project was meant to read from xml file, due to limited knowledge and time constraits that I have struggled to find enough time because of so much workload this week and the past one I have opted for creating my own spring boot REST API and perfomed CRUD, while I understand that this is not exactly what's is required, I didn't want to delay further.
+I sincerely apologize for this and hope I will still stand a better chance for the interview
+
+# This project had two tabs
+* Add book - this will give you an option to add book information and save
+* Book list - This has 3 options, Deleting a book, updating book and viewing book details
+
 # Angular8SpringbootBook
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.

@@ -13,7 +13,7 @@ import { Book } from "../book";
 })
 export class BookListComponent implements OnInit {
 
-  book: Observable<Book[]>;
+  books: Observable<Book[]>;
 
   constructor(private bookService: BookService,
     private router: Router) {}
@@ -23,10 +23,14 @@ export class BookListComponent implements OnInit {
   }
 
   reloadData() {
-    this.book = this.bookService.getAllBooks();
+    this.books = this.bookService.getAllBooks();
   }
 
-  deleteBook(id: number) {
+  bookDetails(id: number){
+    this.router.navigate(['details', id]);
+  }
+
+  deleteBooks(id: number) {
     this.bookService.deleteBook(id)
       .subscribe(
         data => {
@@ -36,9 +40,7 @@ export class BookListComponent implements OnInit {
         error => console.log(error));
   }
 
-  bookDetails(id: number){
-    this.router.navigate(['details', id]);
+  updateBooks(id: number){
+    this.router.navigate(['update', id]);
   }
- 
-
 }
